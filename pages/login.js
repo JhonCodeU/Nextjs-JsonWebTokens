@@ -1,7 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 
-function loginPage () {
+function LoginPage () {
 
   const [credentials, setCredentials] = useState({
     email: '',
@@ -35,4 +35,4 @@ function loginPage () {
   )
 }
 
-export default loginPage;
+export default LoginPage;
