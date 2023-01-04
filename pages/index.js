@@ -1,7 +1,7 @@
-function indexPage () {
+function IndexPage () {
   return (
     <div>Home</div>
   )
 }
 
-export default indexPage
+export default IndexPage
