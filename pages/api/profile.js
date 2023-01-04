@@ -4,6 +4,9 @@ export default function profileHandler (req, res) {
 
   const { myTokenName } = req.cookies
 
+  if (!myTokenName) {
+    return res.status(401).json({ message: 'No token' })
+  }
 
   try {
     const user = verify(myTokenName, 'secret')
@@ -12,5 +15,4 @@ export default function profileHandler (req, res) {
     return res.status(401).json({ message: 'Unauthorized' })
   }
 
-  return res.json({ user: 'user123' })
 }
